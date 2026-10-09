@@ -1,0 +1,9 @@
+Test ID,Module,Scenario,Preconditions,Steps,Expected Result,Priority,Execution Status
+TC-001,Login,Valid credentials,Registered active test user,"Open login page; enter valid email and password; select Sign in",User is authenticated and redirected to account page,High,Not Run
+TC-002,Login,Incorrect password,Registered active test user,"Open login page; enter valid email and wrong password; select Sign in",Error is displayed and user remains unauthenticated,High,Not Run
+TC-003,Login,Empty required fields,Login page accessible,"Leave email and password empty; select Sign in",Required field validation is displayed; no login request succeeds,High,Not Run
+TC-004,Login,Invalid email format,Login page accessible,"Enter abc as email and a password; select Sign in",Email format validation is displayed,Medium,Not Run
+TC-005,Cart,Increase quantity,Cart contains one item at quantity 1,"Open cart; increase quantity to 2",Quantity displays 2 and subtotal doubles,High,Not Run
+TC-006,Cart,Remove item,Cart contains one item,"Open cart; remove the item",Item disappears and cart total is recalculated,High,Not Run
+TC-007,Cart,Calculate multiple-item subtotal,Cart contains two products with known prices,"Set product A to 2 units and product B to 1; view subtotal",Subtotal equals 2 times A price plus B price,High,Not Run
+TC-008,Cart,Reject zero quantity,Cart contains one item,"Attempt to set quantity to 0",Application follows documented quantity rule without invalid negative totals,Medium,Not Run
